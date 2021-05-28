@@ -18,6 +18,7 @@
   "homepage": "https://github.com/OvAnSe/udemy-pulse#readme",
   "devDependencies": {
     "browser-sync": "^2.26.14",
+    "browserslist": "^4.16.6",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
@@ -27,8 +28,7 @@
   },
   "browserslist": [
     "last 2 versions",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
+    "not dead",
+    "> 0.2%"
   ]
 }
