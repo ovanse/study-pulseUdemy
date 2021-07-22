@@ -1,0 +1,171 @@
+.catalog {
+   padding-bottom: 100px;
+   &__tabs {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin-bottom: 0;
+      margin-top: 70px;
+      padding-left: 0;
+   }
+   &__tab {
+      border: 2px solid #d0d0d0;
+      color: #6b6b6b;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 500;
+      height: 50px;
+      line-height: 48px;
+      margin: 0 5px;
+      text-align: center;
+      text-transform: uppercase;
+      transform: skewx(-25deg);
+      transition: 0.5s all;
+      width: 220px;
+      &:hover {
+         border: none;
+         box-shadow: 3px 3px 20px #FF6253;
+      }
+      div {
+         transform: skewx(25deg);
+      }
+      &_active {
+         background-color: $main-color;
+         border: none;
+         color: #ffffff;
+      }
+   }
+   &__content {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 60px;
+      &_active {
+         display: flex;
+      }
+   }
+   &-item {
+      border: solid 2px #e8e8e8;
+      margin-bottom: 20px;
+      min-height: 440px;
+      overflow: hidden;
+      padding: 20px 20px 26px 20px;
+      width: 300px;
+      &__img {
+         display: block;
+         height: 200px;
+         margin: 0 auto;
+         max-width: 100%;
+      }
+      &__subtitle {
+         color: #0d0d0d;
+         font-size: 16px;
+         font-weight: 700;
+         margin-top: 20px;
+         text-align: center;
+      }
+      &__descr {
+         color: #0d0d0d;
+         font-size: 14px;
+         font-weight: 300;
+         margin-top: 16px;
+         text-align: center;
+      }
+      &__link {
+         color: $main-color;
+         display: block;
+         font-size: 14px;
+         font-weight: 500;
+         margin-top: 17px;
+         text-align: center;
+         text-transform: uppercase;
+         &:hover {
+            color: $main-color;
+         }
+      }
+      hr {
+         background-color: #e8e8e8;
+         margin-top: 19px;
+         margin-bottom: 21px;
+         border-bottom: none;
+      }
+      &__footer {
+         align-items: center;
+         display: flex;
+         justify-content: space-between;
+      }
+      &__old-price {
+         color: #555555;
+         font-size: 14px;
+         font-weight: 300;
+         text-decoration: line-through;
+      }
+      &__price {
+         color: #050505;
+         font-size: 20px;
+         font-weight: 700;
+         margin-top: 9px;
+      }
+      &__wrapper {
+         display: flex;
+         width: calc(200% + 40px);
+      }
+      &__content {
+         margin-right: 0px;
+         transform: translateX(-100%);
+         transition: 0.5s all;
+         width: 50%;
+         &_active {
+            margin-right: 20px;
+            transform: translateX(0%);
+         }
+      }
+      &__list {
+         list-style-type: none;
+         margin-left: 20px;
+         margin-bottom: 0;
+         padding-right: 20px;
+         padding-left: 19px;
+         position: relative;
+         transform: translateX(0%);
+         transition: 0.5s all;
+         width: 50%;
+         &_active {
+            margin-left: 0px;
+            transform: translateX(-100%);
+         }
+         li {
+            color: #555555;
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            position: relative;
+            &::before {
+               background-color: $main-color;
+               content: '';
+               height: 5px;
+               left: -14px;
+               position: absolute;
+               top: 7px;
+               width: 5px;
+            }
+         }
+      }
+      &__back {
+         bottom: 0;
+         color: $main-color;
+         display: block;
+         font-size: 14px;
+         font-weight: 500;
+         left: 50%;
+         position: absolute;
+         text-decoration: underline;
+         text-transform: uppercase;
+         transform: translateX(calc(-50% - 19px));
+         &:hover {
+            color: $main-color;
+         }
+      }
+   }
+}
