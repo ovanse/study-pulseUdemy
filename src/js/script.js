@@ -82,4 +82,6 @@ $(document).ready(function(){
 	 validateForms('#consultation-form');
 	 validateForms('#consultation form');
 	 validateForms('#order form');
+
+	 $('input[name=phone]').mask('+7 (000) 000-00-00');
  });
