@@ -1,11 +1,12 @@
-const gulp          = require('gulp');
-const browserSync   = require('browser-sync');
-const sass          = require('gulp-sass');
-const rename        = require("gulp-rename");
-const autoprefixer  = require('gulp-autoprefixer');
-const cleanCSS      = require('gulp-clean-css');
+const gulp				= require('gulp');
+const browserSync		= require('browser-sync');
+const sass				= require('gulp-sass');
+const rename			= require("gulp-rename");
+const autoprefixer	= require('gulp-autoprefixer');
+const cleanCSS			= require('gulp-clean-css');
 const imagemin			= require('gulp-imagemin');
 const htmlmin			= require('gulp-htmlmin');
+const minify			= require('gulp-minify');
 
 // Static server
 gulp.task('server', function() {
@@ -42,6 +43,13 @@ gulp.task('html', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src("src/js/**/*.js")
+		.pipe(minify({
+			ext: {
+				min: '.min.js'
+		  },
+		  noSource: true,
+		  ignoreFiles: ['*min.js']
+		}))
 		.pipe(gulp.dest("dist/js"));
 });
 
